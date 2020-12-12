@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Xayah.FIControl.Common\Xayah.FIControl.Common.csproj" />
+    <ProjectReference Include="..\Xayah.FIControl.DataContext\Xayah.FIControl.DataContext.csproj" />
+    <ProjectReference Include="..\Xayah.FIControl.Domain\Xayah.FIControl.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
