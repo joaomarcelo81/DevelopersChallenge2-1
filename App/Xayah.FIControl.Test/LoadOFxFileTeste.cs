@@ -7,7 +7,7 @@ using Xayah.FIControl.Business;
 
 namespace Xayah.FIControl.Test
 {
-    public class Tests
+    public class LoadOFxFileTeste
     {
         [SetUp]
         public void Setup()
