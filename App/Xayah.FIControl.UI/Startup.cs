@@ -5,6 +5,12 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Xayah.FIControl.Business;
+using Xayah.FIControl.DataContext;
+using Xayah.FIControl.DataContext.Repositories;
+using Xayah.FIControl.Domain.Domain.Interfaces.Business;
+using Xayah.FIControl.Domain.Domain.Interfaces.Repositories;
+using Xayah.FIControl.Domain.Enitties;
 
 namespace Xayah.FIControl.UI
 {
@@ -28,6 +34,8 @@ namespace Xayah.FIControl.UI
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
+            DefineInjection(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +74,26 @@ namespace Xayah.FIControl.UI
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+        }
+
+
+        private static void DefineInjection(IServiceCollection services)
+        {
+            services.AddEntityFrameworkSqlite().AddDbContext<XayahFIControlDataContext>();
+
+
+            services.AddTransient(typeof(IBaseBusiness<>), typeof(BaseBusiness<>));
+            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+
+            services.AddTransient(typeof(IAccountlauncheRepository), typeof(AccountlauncheRepository));
+            services.AddTransient(typeof(IAccountlauncheBusiness), typeof(AccountlauncheBusiness));
+
+            services.AddTransient(typeof(IBankStatementRepository), typeof(BankStatementRepository));
+            services.AddTransient(typeof(IBankStatementBusiness), typeof(BankStatementBusiness));
+
+
+
+
         }
     }
 }

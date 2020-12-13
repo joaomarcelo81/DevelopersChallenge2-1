@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import axios from 'axios'
 export class Statement extends Component {
     constructor(props) {
         super(props);
@@ -18,9 +18,10 @@ export class Statement extends Component {
                 'content-type': 'multipart/form-data'
             }
         };
-        axios.post("/upload", formData, config)
+        axios.post("/UploadOFX", formData, config)
             .then((response) => {
                 alert("The file is successfully uploaded");
+                window.location.href = '/';
             }).catch((error) => {
             });
     }
@@ -29,10 +30,12 @@ export class Statement extends Component {
     }
 
     render() {
-        return (
+        return (            
+         
             <form onSubmit={this.onFormSubmit}>
-                <h1>File Upload</h1>
-                <input type="file" name="myImage" onChange={this.onChange} />
+                <h1 id="tabelLabel" >Upload OFX File </h1>
+                <p>Accounts information.</p>  
+                <input type="file" name="file" onChange={this.onChange} />
                 <button type="submit">Upload</button>
             </form>
         )

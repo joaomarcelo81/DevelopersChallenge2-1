@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xayah.FIControl.Business", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xayah.FIControl.DataContext", "Xayah.FIControl.DataContext\Xayah.FIControl.DataContext.csproj", "{0E466F68-D155-4005-8568-76F1B2FA71FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xayah.FIControl.Common", "Xayah.FIControl.Common\Xayah.FIControl.Common.csproj", "{1C8BAC66-A4D9-47C0-BE44-CE90EA09AD97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xayah.FIControl.Common", "Xayah.FIControl.Common\Xayah.FIControl.Common.csproj", "{1C8BAC66-A4D9-47C0-BE44-CE90EA09AD97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xayah.FIControl.Test", "Xayah.FIControl.Test\Xayah.FIControl.Test.csproj", "{8625BD57-32C4-4588-A9E6-DA439EEA0024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xayah.FIControl.Test", "Xayah.FIControl.Test\Xayah.FIControl.Test.csproj", "{8625BD57-32C4-4588-A9E6-DA439EEA0024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xayah.FIControl.Domain", "Xayah.FIControl.Domain\Xayah.FIControl.Domain.csproj", "{2BC8A17B-450D-4617-B5FC-08480AF79A5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xayah.FIControl.Domain", "Xayah.FIControl.Domain\Xayah.FIControl.Domain.csproj", "{2BC8A17B-450D-4617-B5FC-08480AF79A5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

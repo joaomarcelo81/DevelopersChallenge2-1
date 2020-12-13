@@ -6,9 +6,9 @@ namespace Xayah.FIControl.Domain
 {
     public class OFXReader
     {
-        private FileStream fs;
+        private Stream fs;
 
-        public FileStream GetFileData()
+        public Stream GetFileData()
         {
             return fs;
         }
@@ -18,6 +18,11 @@ namespace Xayah.FIControl.Domain
             fs = new FileStream(fileName,
                                           FileMode.Open,
                                           FileAccess.Read);
+        }
+
+        public OFXReader(Stream fileStream)
+        {
+            fs = fileStream;
         }
 
         public string GetTagData(string tagname)
@@ -45,6 +50,11 @@ namespace Xayah.FIControl.Domain
                 throw ex;
             }
             return contentTag;
+        }
+
+        public static explicit operator OFXReader(FileStream value)
+        {
+            return new OFXReader(value);
         }
     }
 }
