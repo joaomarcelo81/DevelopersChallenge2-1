@@ -24,12 +24,12 @@ namespace Xayah.FIControl.Test
             var fileName = @"OFXFIles\extrato1.ofx";   
 
             OFXReader r = new OFXReader(fileName);
-        //    data.statement =  business.LoadStatements(r);
+   
 
 
            var _OFXData = business.LoadData(r);
 
-            Assert.IsTrue(((List<OFXBankStatement>)data.statements).Count() == 31);
+            Assert.IsTrue(((List<OFXBankStatement>)_OFXData.statements).Count() == 31);
         }
         
     }
